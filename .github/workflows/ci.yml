@@ -148,7 +148,7 @@ jobs:
 
       - name: Login to Azure Container Registry
         run: |
-          az acr login --name ${{ vars.ACR_NAME }}
+          az acr login --name ${{ vars.ACR_NAME }} --subscription ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Build Docker image
         run: |
